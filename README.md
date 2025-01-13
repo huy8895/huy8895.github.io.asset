@@ -1,10 +1,12 @@
 
 Đường dẫn bạn đưa ra là một URL của jsDelivr để phân phối một tệp hình ảnh từ một kho lưu trữ trên GitHub. Hãy phân tích từng phần của đường dẫn này:
 
-bash
+
 ```
 https://cdn.jsdelivr.net/gh/huy8895/huy8895.github.io.asset/assets/img/posts/20240907/0.png
 ```
+
+- muốn view ảnh mới nhất: `https://cdn.jsdelivr.net/gh/huy8895/huy8895.github.io.asset@master/assets/img/posts/20240913/0.png`
 1. https://cdn.jsdelivr.net/
 Đây là giao thức HTTPS và tên miền của jsDelivr CDN. Tất cả các tệp phân phối qua jsDelivr đều sử dụng tên miền này để đảm bảo rằng các tệp được phân phối từ mạng lưới máy chủ CDN của jsDelivr trên toàn cầu.
 2. /gh/
