@@ -48,7 +48,7 @@ function greetUser() {
     setInterval(showTooltipSequentially, 10000);
 
     document.querySelector('.youtube').addEventListener('click', function () {
-        window.open('https://www.youtube.com/@LearnChineseThroughPodcast', '_blank');
+        window.open('https://www.youtube.com/@ChineseDailyPodcast', '_blank');
     });
 
     document.querySelector('.coffe').addEventListener('click', function () {
