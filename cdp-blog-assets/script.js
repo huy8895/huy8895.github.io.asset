@@ -52,11 +52,11 @@ function greetUser() {
     });
 
     document.querySelector('.coffe').addEventListener('click', function () {
-        window.open('https://www.coff.ee/learnchinesepodcast', '_blank');
+        window.open('https://buymeacoffee.com/chinesedailypodcast', '_blank');
     });
 
     document.querySelector('.spotify-channel').addEventListener('click', function () {
-        window.open('https://open.spotify.com/show/1hZZO7dyrSnW4MHvvZIXz7?si=5a3751815fdb4d3a', '_blank');
+        window.open('https://open.spotify.com/show/0hzr17Qx90pgV0PcfXOyrd', '_blank');
     });
 }
 
