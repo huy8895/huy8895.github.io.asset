@@ -178,6 +178,7 @@ details[open] .transcript-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    z-index: 1000;
 }
 
 .social:hover {
