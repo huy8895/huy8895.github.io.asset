@@ -118,5 +118,58 @@ function initializeUI() {
 // Chạy hàm khởi tạo giao diện khi toàn bộ nội dung trang đã sẵn sàng
 document.addEventListener('DOMContentLoaded', initializeUI);
 
+/* == Membership Content Locker == */
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Hàm xử lý khóa nội dung
+    function initializeContentLocker() {
+        const transcriptContainer = document.getElementById('transcript-container');
 
+        // Nếu không có khối transcript trên trang, dừng lại
+        if (!transcriptContainer) {
+            return;
+        }
+
+        // Đọc ngày phát hành từ data attribute của HTML
+        const releaseDateString = transcriptContainer.dataset.releaseDate;
+
+        // Nếu không có ngày nào được đặt, coi như nội dung công khai và dừng lại
+        if (!releaseDateString) {
+            return;
+        }
+        
+        // --- Cấu hình của bạn ---
+        const membershipUrl = 'https://www.youtube.com/channel/YOUR_CHANNEL_ID/join';
+        // -------------------------
+
+        const publicReleaseDate = new Date(releaseDateString + 'T00:00:00Z');
+        const currentDate = new Date();
+        const urlParams = new URLSearchParams(window.location.search);
+        const isMember = urlParams.get('member') === 'true';
+
+        const shouldShowTranscript = isMember || (currentDate >= publicReleaseDate);
+
+        if (!shouldShowTranscript) {
+            const formattedDate = publicReleaseDate.toLocaleDateString('en-US', {
+                year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+            });
+
+            transcriptContainer.innerHTML = `
+                <div class="member-only-notice">
+                    <h2 id="script">📄 文本 / Transcript</h2>
+                    <p>
+                        <strong>This transcript is currently for YouTube Channel Members only.</strong><br>
+                        It will become available to everyone on <strong>${formattedDate}</strong>. Join today for early access! 🙏
+                    </p>
+                    <a href="${membershipUrl}" class="member-join-button" target="_blank">
+                        Click Here to Become a Member
+                    </a>
+                </div>
+            `;
+        }
+    }
+
+    // Chạy hàm khi trang đã tải xong
+    initializeContentLocker();
+});
 // --- Kết thúc file script.js ---
