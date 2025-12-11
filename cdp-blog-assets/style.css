@@ -279,3 +279,32 @@ details[open] .transcript-content {
     font-size: 12px;
     font-weight: bold;
 }
+
+/* == Membership Notice Styles == */
+.member-only-notice {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+.member-only-notice h2 {
+    margin-top: 0;
+    font-family: inherit;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.member-join-button {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.member-join-button:hover {
+    background-color: #cc0000;
+}
