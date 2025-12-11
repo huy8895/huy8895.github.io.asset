@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // --- Cấu hình của bạn ---
-        const membershipUrl = 'https://www.youtube.com/channel/YOUR_CHANNEL_ID/join';
+        const membershipUrl = 'https://www.youtube.com/channel/UCyYT-HdG1FXua6_vwyXNqhg/join';
         // -------------------------
 
         const publicReleaseDate = new Date(releaseDateString + 'T00:00:00Z');
